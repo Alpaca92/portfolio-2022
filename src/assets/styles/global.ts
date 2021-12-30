@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
@@ -13,6 +14,12 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
 `;
 
 export default GlobalStyle;

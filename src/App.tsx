@@ -1,11 +1,18 @@
-import Background from "./components/Background";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./assets/styles/themes";
+import GlobalStyle from "./assets/styles/global";
+import Router from "./Router";
+import { useRecoilValue } from "recoil";
+import { isDarkState } from "./atoms";
 
 function App() {
+  const isDark = useRecoilValue(isDarkState);
+
   return (
-    <>
-      <Background />
-      <span>Hello !</span>
-    </>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
   );
 }
 
