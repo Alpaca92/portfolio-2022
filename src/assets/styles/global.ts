@@ -1,11 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
-
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
-  html, body {
-    overflow: hidden;
+  html {
+	height: 100%;
+	background: radial-gradient(ellipse at bottom, ${(props) =>
+    props.theme.bgBottomColor} 0%, ${(props) => props.theme.bgTopColor} 100%);
+	overflow: hidden;
   }
 
   * {
