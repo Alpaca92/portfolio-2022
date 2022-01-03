@@ -78,13 +78,17 @@ const Star3 = styled.div`
   }
 `;
 
+const BackgroundContainer = styled.div`
+  position: absolute;
+`;
+
 function Background() {
   return (
-    <>
+    <BackgroundContainer>
       <Star1 />
       <Star2 />
       <Star3 />
-    </>
+    </BackgroundContainer>
   );
 }
 

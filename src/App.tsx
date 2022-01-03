@@ -6,7 +6,7 @@ import { useRecoilValue } from "recoil";
 import { isDarkState } from "./atoms";
 
 function App() {
-  const isDark = useRecoilValue(isDarkState);
+  const isDark = /* get localStorage code || */ useRecoilValue(isDarkState);
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
