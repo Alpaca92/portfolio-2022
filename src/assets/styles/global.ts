@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

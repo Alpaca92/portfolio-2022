@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
-  a {
-    color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.textColor};
+
+  & > a {
+    font-family: "Licorice", sans-serif;
   }
 `;
 
