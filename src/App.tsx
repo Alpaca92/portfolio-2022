@@ -7,7 +7,7 @@ import { isDarkState } from "./atoms";
 import { StyledEngineProvider } from "@mui/material";
 
 function App() {
-  const isDark = /* get localStorage code || */ useRecoilValue(isDarkState);
+  const isDark = useRecoilValue(isDarkState);
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
