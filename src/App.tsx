@@ -4,6 +4,7 @@ import GlobalStyle from "./assets/styles/global";
 import Router from "./Router";
 import { useRecoilValue } from "recoil";
 import { isDarkState } from "./atoms";
+import { StyledEngineProvider } from "@mui/material";
 
 function App() {
   const isDark = /* get localStorage code || */ useRecoilValue(isDarkState);
@@ -11,7 +12,9 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Router />
+      <StyledEngineProvider injectFirst>
+        <Router />
+      </StyledEngineProvider>
     </ThemeProvider>
   );
 }

@@ -5,6 +5,8 @@ declare module "styled-components" {
     bgBottomColor: string;
     bgTopColor: string;
     starColor: string;
+    switcherBgColor: string;
+    switcherThumbColor: string;
     textColor: string;
   }
 }
