@@ -51,6 +51,7 @@ function Header() {
           </a>
         </li>
         <li>
+          {/* 블로그 만들면 주소 입력하기 */}
           <a rel="noopener noreferrer" target="_blank" href="#">
             blog <RiExternalLinkLine />
           </a>
