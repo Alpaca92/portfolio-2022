@@ -5,7 +5,7 @@ import { isDarkState } from "../atoms";
 import darkSvg from "../assets/images/darkSvg";
 import lightSvg from "../assets/images/lightSvg";
 
-const Switcher = styled(Switch as any)`
+const Switcher = styled(Switch)<{ $isDark: number }>`
   & .Mui-checked {
     transform: translateX(12px);
   }
@@ -24,7 +24,7 @@ const Switcher = styled(Switch as any)`
       top: 0;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url(${(props) => (props.isDark ? darkSvg : lightSvg)});
+      background-image: url(${(props) => (props.$isDark ? darkSvg : lightSvg)});
     }
   }
 
@@ -50,7 +50,7 @@ function Themeswitcher() {
     <Switcher
       defaultChecked={isDark ? true : false}
       onChange={onThemeChange}
-      isDark={isDark}
+      $isDark={isDark ? 1 : 0}
     />
   );
 }

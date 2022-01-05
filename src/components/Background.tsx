@@ -94,6 +94,8 @@ function Background() {
   };
 
   useLayoutEffect(() => {
+    
+
     setDarkThemeStars([
       multipleBoxShadow(700, "#fff"),
       multipleBoxShadow(200, "#fff"),
