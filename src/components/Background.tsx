@@ -3,7 +3,7 @@ import { useRecoilValue } from "recoil";
 import styled, { keyframes } from "styled-components";
 import { isDarkState } from "../atoms";
 interface BoxShadow {
-  boxShadow: string;
+  boxShadow?: string;
 }
 
 const animation = keyframes`
@@ -110,17 +110,23 @@ function Background() {
     <BackgroundContainer>
       <Star1
         boxShadow={
-          isDark ? darkThemeStars[0].toString() : lightThemeStars[0].toString()
+          isDark
+            ? darkThemeStars[0]?.toString()
+            : lightThemeStars[0]?.toString()
         }
       />
       <Star2
         boxShadow={
-          isDark ? darkThemeStars[1].toString() : lightThemeStars[1].toString()
+          isDark
+            ? darkThemeStars[1]?.toString()
+            : lightThemeStars[1]?.toString()
         }
       />
       <Star3
         boxShadow={
-          isDark ? darkThemeStars[2].toString() : lightThemeStars[2].toString()
+          isDark
+            ? darkThemeStars[2]?.toString()
+            : lightThemeStars[2]?.toString()
         }
       />
     </BackgroundContainer>
