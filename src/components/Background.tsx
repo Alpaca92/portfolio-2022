@@ -76,10 +76,10 @@ const BackgroundContainer = styled.div`
 
 function Background() {
   const isDark = useRecoilValue(isDarkState);
-  const [darkThemeStars, setDarkThemeStars] = useState<String[]>([]);
-  const [lightThemeStars, setLightThemeStars] = useState<String[]>([]);
+  const [darkThemeShadows, setDarkThemeShadows] = useState<String[]>([]);
+  const [lightThemeShadows, setLightThemeShadows] = useState<String[]>([]);
 
-  const multipleBoxShadow = (n: number, color: string) => {
+  const BoxShadows = (n: number, color: string) => {
     let value = `${Math.floor(Math.random() * 2000 + 1)}px ${Math.floor(
       Math.random() * 2000 + 1
     )}px ${color}`;
@@ -94,15 +94,15 @@ function Background() {
   };
 
   useLayoutEffect(() => {
-    setDarkThemeStars([
-      multipleBoxShadow(700, "#fff"),
-      multipleBoxShadow(200, "#fff"),
-      multipleBoxShadow(100, "#fff"),
+    setDarkThemeShadows([
+      BoxShadows(700, "#fff"),
+      BoxShadows(200, "#fff"),
+      BoxShadows(100, "#fff"),
     ]);
-    setLightThemeStars([
-      multipleBoxShadow(700, "#000"),
-      multipleBoxShadow(200, "#000"),
-      multipleBoxShadow(100, "#000"),
+    setLightThemeShadows([
+      BoxShadows(700, "#000"),
+      BoxShadows(200, "#000"),
+      BoxShadows(100, "#000"),
     ]);
   }, []);
 
@@ -111,22 +111,22 @@ function Background() {
       <Star1
         boxShadow={
           isDark
-            ? darkThemeStars[0]?.toString()
-            : lightThemeStars[0]?.toString()
+            ? darkThemeShadows[0]?.toString()
+            : lightThemeShadows[0]?.toString()
         }
       />
       <Star2
         boxShadow={
           isDark
-            ? darkThemeStars[1]?.toString()
-            : lightThemeStars[1]?.toString()
+            ? darkThemeShadows[1]?.toString()
+            : lightThemeShadows[1]?.toString()
         }
       />
       <Star3
         boxShadow={
           isDark
-            ? darkThemeStars[2]?.toString()
-            : lightThemeStars[2]?.toString()
+            ? darkThemeShadows[2]?.toString()
+            : lightThemeShadows[2]?.toString()
         }
       />
     </BackgroundContainer>
