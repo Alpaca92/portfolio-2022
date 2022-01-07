@@ -5,16 +5,18 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   html {
-	height: 100%;
+  padding-top: 70px;
 	background: radial-gradient(ellipse at bottom, ${(props) =>
     props.theme.bgBottomColor} 0%, ${(props) => props.theme.bgTopColor} 100%);
+    
+  height: 100%;
 	overflow: hidden;
   }
 
   * {
     box-sizing: border-box;
     font-family: 'NanumSquare', sans-serif;
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.mainColor};
   }
 
   ul {

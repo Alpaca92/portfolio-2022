@@ -9,7 +9,7 @@ declare module "styled-components" {
     switcherThumbColor: string;
     headerBgColor: string;
     hamburgerBgColor: string;
-    hamburgerHoverColor: string;
-    textColor: string;
+    hoverColor: string;
+    mainColor: string;
   }
 }

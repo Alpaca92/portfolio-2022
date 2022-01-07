@@ -88,7 +88,7 @@ const Navigation = styled.nav`
         transition: background-color 0.15s ease-in-out;
 
         &:hover:not(.hamburger-top) {
-          background-color: ${(props) => props.theme.hamburgerHoverColor};
+          background-color: ${(props) => props.theme.hoverColor};
         }
 
         & > a {
