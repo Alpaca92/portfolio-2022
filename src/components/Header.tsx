@@ -36,7 +36,7 @@ const HeaderContainer = styled.header`
       cursor: pointer;
     }
 
-    & .hamburger-show {
+    & .active {
       transform: translateX(0em);
       transition: transform 0.3s ease-in-out;
     }
@@ -134,15 +134,15 @@ function Header() {
   return (
     <HeaderContainer>
       <Link to="/">Changsung</Link>
-      <Navigation className={hamburgerShow ? "hamburger-show" : ""}>
+      <Navigation className={hamburgerShow ? "active" : ""}>
         <ul>
-          <li>
+          <li onClick={onHamburgerShow}>
             <Link to="/">about</Link>
           </li>
-          <li>
+          <li onClick={onHamburgerShow}>
             <Link to="/">projects</Link>
           </li>
-          <li>
+          <li onClick={onHamburgerShow}>
             <Link to="/">contact</Link>
           </li>
           <li className="hamburger-top github">
