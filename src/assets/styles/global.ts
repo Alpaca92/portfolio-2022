@@ -9,12 +9,12 @@ const GlobalStyle = createGlobalStyle`
 	background: radial-gradient(ellipse at bottom, ${(props) =>
     props.theme.bgBottomColor} 0%, ${(props) => props.theme.bgTopColor} 100%);
 	overflow: hidden;
-  font-size: 16px;
   }
 
   * {
     box-sizing: border-box;
     font-family: 'NanumSquare', sans-serif;
+    color: ${(props) => props.theme.textColor};
   }
 
   ul {
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 `;
 

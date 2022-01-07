@@ -5,10 +5,19 @@ import { RiExternalLinkLine } from "react-icons/ri";
 import Themeswitcher from "./Themeswitcher";
 
 const HeaderContainer = styled.header`
-  color: ${(props) => props.theme.textColor};
-  font-size: 1.2rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem;
 
   & > a {
+    font-size: 1.8rem;
     font-family: "Licorice", sans-serif;
     font-weight: 600;
   }
@@ -17,16 +26,23 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const Navigation = styled.nav``;
+const Navigation = styled.nav`
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+`;
 
-const Gnb = styled.ul``;
-
-const Lnb = styled.ul``;
+const Gnb = styled.ul`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 function Header() {
   return (
     <HeaderContainer>
-      <Link to="/">alpaca</Link>
+      <Link to="/">Changsung</Link>
       <Navigation>
         <Gnb>
           <li>
@@ -38,28 +54,28 @@ function Header() {
           <li>
             <Link to="/">contact</Link>
           </li>
+          <li>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/Alpaca92"
+            >
+              <span>github</span>
+              <RiExternalLinkLine />
+            </a>
+          </li>
+          <li>
+            {/* 블로그 만들면 주소 입력하기 */}
+            <a rel="noopener noreferrer" target="_blank" href="#">
+              <span>blog</span>
+              <RiExternalLinkLine />
+            </a>
+          </li>
+          <li>
+            <Themeswitcher />
+          </li>
         </Gnb>
       </Navigation>
-      <Lnb>
-        <li>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/Alpaca92"
-          >
-            github <RiExternalLinkLine />
-          </a>
-        </li>
-        <li>
-          {/* 블로그 만들면 주소 입력하기 */}
-          <a rel="noopener noreferrer" target="_blank" href="#">
-            blog <RiExternalLinkLine />
-          </a>
-        </li>
-        <li>
-          <Themeswitcher />
-        </li>
-      </Lnb>
     </HeaderContainer>
   );
 }
