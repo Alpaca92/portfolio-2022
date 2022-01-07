@@ -6,6 +6,7 @@ const Article = styled.article`
   margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
+  word-break: break-word;
 
   & > h1 {
     font-size: 2rem;

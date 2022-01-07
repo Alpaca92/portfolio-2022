@@ -3,7 +3,7 @@ import Article from "../assets/styles/article";
 import { IconContext } from "react-icons";
 import { BiMobileVibration } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
-import media from '../assets/styles/media';
+import media from "../assets/styles/media";
 
 const ContactContainer = styled.ul`
   width: 34rem;
@@ -29,7 +29,7 @@ const ContactContainer = styled.ul`
   }
 
   ${media.tablet} {
-    
+    width: 80%;
   }
 `;
 
