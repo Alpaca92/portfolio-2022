@@ -7,6 +7,9 @@ declare module "styled-components" {
     starColor: string;
     switcherBgColor: string;
     switcherThumbColor: string;
+    headerBgColor: string;
+    hamburgerBgColor: string;
+    hamburgerHoverColor: string;
     textColor: string;
   }
 }

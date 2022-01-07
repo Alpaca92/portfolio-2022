@@ -5,6 +5,7 @@ import { IconContext } from "react-icons";
 import { RiExternalLinkLine, RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Themeswitcher from "./Themeswitcher";
+import { useState } from "react";
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -17,14 +18,28 @@ const HeaderContainer = styled.header`
   text-align: center;
   font-size: 1.1rem;
   padding: 1rem;
+  background-color: ${(props) => props.theme.headerBgColor};
 
   & > a {
     font-size: 1.8rem;
     font-family: "Licorice", sans-serif;
     font-weight: 600;
   }
+
   & > svg {
     display: none;
+  }
+
+  ${media.tablet} {
+    & > .hamburger-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    & .hamburger-show {
+      transform: translateX(0em);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 `;
 
@@ -36,13 +51,18 @@ const Navigation = styled.nav`
     align-items: center;
   }
 
+  & .hamburger-close {
+    display: none;
+  }
+
   ${media.tablet} {
     position: absolute;
     top: 0;
     right: 0;
     height: 100vh;
     padding: 0.7rem;
-    background-color: rgb(23, 23, 24);
+    background-color: ${(props) => props.theme.hamburgerBgColor};
+    transform: translateX(30em);
 
     & > ul {
       font-size: 1rem;
@@ -55,22 +75,26 @@ const Navigation = styled.nav`
         font-family: sans-serif;
       }
 
+      & > li:not(.hamburger-top):first-child {
+        margin-top: 1rem;
+      }
+
       & > li:not(.hamburger-top) {
         grid-column: 1 / -1;
         width: 100%;
-        padding: 0.7rem;
+
         text-align: end;
         border-radius: 0.3rem;
         transition: background-color 0.15s ease-in-out;
 
         &:hover:not(.hamburger-top) {
-          background-color: rgb(47, 48, 49);
+          background-color: ${(props) => props.theme.hamburgerHoverColor};
         }
 
         & > a {
-          & > .header__link-icon {
-            margin-left: 0.2rem;
-          }
+          display: block;
+          width: 100%;
+          padding: 0.7rem;
         }
       }
 
@@ -85,7 +109,15 @@ const Navigation = styled.nav`
         justify-self: normal;
 
         & > .hamburger-close {
+          display: block;
           margin-top: 0.3rem;
+          cursor: pointer;
+        }
+
+        & > a {
+          & > .header__link-icon {
+            margin-left: 0.2rem;
+          }
         }
       }
     }
@@ -93,10 +125,16 @@ const Navigation = styled.nav`
 `;
 
 function Header() {
+  const [hamburgerShow, setHamburgerShow] = useState(false);
+
+  const onHamburgerShow = () => {
+    setHamburgerShow((cur) => !cur);
+  };
+
   return (
     <HeaderContainer>
       <Link to="/">Changsung</Link>
-      <Navigation>
+      <Navigation className={hamburgerShow ? "hamburger-show" : ""}>
         <ul>
           <li>
             <Link to="/">about</Link>
@@ -119,7 +157,7 @@ function Header() {
               </IconContext.Provider>
             </a>
           </li>
-          <li className="hamburger-top">
+          <li className="hamburger-top blog">
             {/* 블로그 만들면 주소 입력하기 */}
             <a rel="noopener noreferrer" target="_blank" href="#">
               <span>blog</span>
@@ -135,13 +173,15 @@ function Header() {
             <IconContext.Provider
               value={{ size: "1.4em", className: "hamburger-close" }}
             >
-              <RiCloseFill />
+              <RiCloseFill onClick={onHamburgerShow} />
             </IconContext.Provider>
           </li>
         </ul>
       </Navigation>
-      <IconContext.Provider value={{ size: "1.4em" }}>
-        <GiHamburgerMenu />
+      <IconContext.Provider
+        value={{ size: "1.4em", className: "hamburger-icon" }}
+      >
+        <GiHamburgerMenu onClick={onHamburgerShow} />
       </IconContext.Provider>
     </HeaderContainer>
   );
