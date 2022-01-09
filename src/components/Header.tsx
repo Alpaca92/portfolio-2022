@@ -158,8 +158,11 @@ function Header() {
             </a>
           </li>
           <li className="hamburger-top blog">
-            {/* 블로그 만들면 주소 입력하기 */}
-            <a rel="noopener noreferrer" target="_blank" href="#">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://velog.io/@zxcvbnm5288"
+            >
               <span>blog</span>
               <IconContext.Provider value={{ className: "header__link-icon" }}>
                 <RiExternalLinkLine />
