@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 import { RiExternalLinkLine, RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Themeswitcher from "./Themeswitcher";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -126,23 +126,36 @@ const Navigation = styled.nav`
 
 function Header() {
   const [hamburgerShow, setHamburgerShow] = useState(false);
+  const [windowWidthSize, setWindowWidthSize] = useState(0);
 
   const onHamburgerShow = () => {
     setHamburgerShow((cur) => !cur);
   };
+
+  const onResize = () => {
+    setWindowWidthSize(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   return (
     <HeaderContainer>
       <Link to="/">Changsung</Link>
       <Navigation className={hamburgerShow ? "active" : ""}>
         <ul>
-          <li onClick={onHamburgerShow}>
+          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
             <Link to="/">about</Link>
           </li>
-          <li onClick={onHamburgerShow}>
+          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
             <Link to="/">projects</Link>
           </li>
-          <li onClick={onHamburgerShow}>
+          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
             <Link to="/">contact</Link>
           </li>
           <li className="hamburger-top github">
