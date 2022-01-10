@@ -1,8 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 export const darkTheme: DefaultTheme = {
-  bgBottomColor: "#111",
-  bgTopColor: "#000",
+  bgColor: "#000",
   starColor: "#fff",
   switcherBgColor: "#2d3436",
   switcherThumbColor: "#1a1b1b",
@@ -13,8 +12,7 @@ export const darkTheme: DefaultTheme = {
 };
 
 export const lightTheme: DefaultTheme = {
-  bgBottomColor: "#eee",
-  bgTopColor: "#fff",
+  bgColor: "#fff",
   starColor: "#000",
   switcherBgColor: "#eceff1",
   switcherThumbColor: "#fff",

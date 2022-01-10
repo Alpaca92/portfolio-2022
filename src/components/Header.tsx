@@ -8,6 +8,7 @@ import Themeswitcher from "./Themeswitcher";
 import { useEffect, useState } from "react";
 
 const HeaderContainer = styled.header`
+  z-index: 999;
   width: 100%;
   position: fixed;
   left: 0;
@@ -150,9 +151,12 @@ function Header() {
       <Link to="/">Changsung</Link>
       <Navigation className={hamburgerShow ? "active" : ""}>
         <ul>
-          {headers.map((header) => (
-            <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
-              <Link to={`/`}>{header}</Link>
+          {headers.map((header, idx) => (
+            <li
+              key={idx}
+              onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}
+            >
+              <Link to={`#${header}`}>{header}</Link>
             </li>
           ))}
           <li className="hamburger-top github">

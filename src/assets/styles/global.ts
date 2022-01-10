@@ -5,12 +5,8 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   html {
-  padding-top: 70px;
-	background: radial-gradient(ellipse at bottom, ${(props) =>
-    props.theme.bgBottomColor} 0%, ${(props) => props.theme.bgTopColor} 100%);
-    
-  height: 100%;
-	overflow: hidden;
+    padding-top: 9rem;
+    background: ${(props) => props.theme.bgColor} 100%;
   }
 
   * {

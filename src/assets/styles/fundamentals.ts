@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import media from "./media";
 
-const Article = styled.article`
-  max-width: 75em;
+export const Article = styled.article`
+  max-width: 75rem;
   margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
@@ -16,5 +16,3 @@ const Article = styled.article`
     max-width: 100vw;
   }
 `;
-
-export default Article;

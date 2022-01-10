@@ -2,8 +2,7 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    bgBottomColor: string;
-    bgTopColor: string;
+    bgColor: string;
     starColor: string;
     switcherBgColor: string;
     switcherThumbColor: string;

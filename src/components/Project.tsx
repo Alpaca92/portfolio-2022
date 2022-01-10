@@ -1,5 +1,5 @@
 function Project() {
-  return <article></article>;
+  return <li></li>;
 }
 
 export default Project;

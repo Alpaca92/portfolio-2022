@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Article from "../assets/styles/article";
+import { Article } from "../assets/styles/fundamentals";
 import { IconContext } from "react-icons";
 import { BiMobileVibration } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
@@ -35,7 +35,7 @@ const ContactContainer = styled.ul`
 
 function Contact() {
   return (
-    <Article>
+    <Article id="#contact">
       <h1>Contact</h1>
       <p>궁금한 점이 있으시다면 언제든지 연락주세요 📞</p>
       <ContactContainer>
