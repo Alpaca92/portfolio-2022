@@ -35,7 +35,7 @@ const ContactContainer = styled.ul`
 
 function Contact() {
   return (
-    <Article id="#contact">
+    <Article id="contact">
       <h1>Contact</h1>
       <p>궁금한 점이 있으시다면 언제든지 연락주세요 📞</p>
       <ContactContainer>

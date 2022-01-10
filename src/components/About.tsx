@@ -1,6 +1,7 @@
-import { Article } from "../assets/styles/fundamentals";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
+import { BiChevronRight } from "react-icons/bi";
+import { Article } from "../assets/styles/fundamentals";
 import Img from "../assets/images/profile-emoji.png";
 import media from "../assets/styles/media";
 
@@ -26,6 +27,24 @@ const AboutArticle = styled(Article)`
 
       & > div {
         display: inline;
+      }
+    }
+
+    & > div {
+      display: flex;
+      justify-content: center;
+
+      & > a {
+        color: ${(props) => props.theme.accentColor};
+        width: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
@@ -54,6 +73,7 @@ const AboutArticle = styled(Article)`
     }
 
     & > img {
+      margin-top: 1rem;
       width: 13rem;
     }
   }
@@ -81,6 +101,16 @@ function About() {
           />
           개발자입니다.
         </p>
+        <div>
+          <a
+            // notion profile page 만들어서 링크에 넣기
+            href="#"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            view more <BiChevronRight />
+          </a>
+        </div>
       </div>
       <img src={Img} alt="프로필용 이모지" />
     </AboutArticle>

@@ -10,5 +10,6 @@ declare module "styled-components" {
     hamburgerBgColor: string;
     hoverColor: string;
     mainColor: string;
+    accentColor: string;
   }
 }

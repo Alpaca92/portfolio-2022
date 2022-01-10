@@ -7,12 +7,12 @@ const GlobalStyle = createGlobalStyle`
   html {
     padding-top: 9rem;
     background: ${(props) => props.theme.bgColor} 100%;
+    color: ${(props) => props.theme.mainColor};
+    font-family: 'NanumSquare', sans-serif;
   }
 
   * {
     box-sizing: border-box;
-    font-family: 'NanumSquare', sans-serif;
-    color: ${(props) => props.theme.mainColor};
   }
 
   ul {

@@ -9,6 +9,7 @@ export const darkTheme: DefaultTheme = {
   hamburgerBgColor: "rgb(23, 23, 24)",
   hoverColor: "rgb(47, 48, 49)",
   mainColor: "#ecf0f1",
+  accentColor: "#ecb365",
 };
 
 export const lightTheme: DefaultTheme = {
@@ -20,4 +21,5 @@ export const lightTheme: DefaultTheme = {
   hamburgerBgColor: "rgb(255, 255, 255)",
   hoverColor: "rgb(242, 242, 242)",
   mainColor: "#1e272e",
+  accentColor: "#2d46b9",
 };
