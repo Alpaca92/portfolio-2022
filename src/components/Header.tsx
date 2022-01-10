@@ -127,6 +127,7 @@ const Navigation = styled.nav`
 function Header() {
   const [hamburgerShow, setHamburgerShow] = useState(false);
   const [windowWidthSize, setWindowWidthSize] = useState(0);
+  const headers = ["about", "projects", "contact"];
 
   const onHamburgerShow = () => {
     setHamburgerShow((cur) => !cur);
@@ -149,15 +150,11 @@ function Header() {
       <Link to="/">Changsung</Link>
       <Navigation className={hamburgerShow ? "active" : ""}>
         <ul>
-          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
-            <Link to="/">about</Link>
-          </li>
-          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
-            <Link to="/">projects</Link>
-          </li>
-          <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
-            <Link to="/">contact</Link>
-          </li>
+          {headers.map((header) => (
+            <li onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}>
+              <Link to={`/`}>{header}</Link>
+            </li>
+          ))}
           <li className="hamburger-top github">
             <a
               rel="noopener noreferrer"
