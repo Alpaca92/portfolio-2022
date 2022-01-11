@@ -81,7 +81,7 @@ const AboutArticle = styled(Article)`
 
 function About() {
   return (
-    <AboutArticle>
+    <AboutArticle id="about">
       <div>
         <i>
           compare yourself to who you were yesterday,
