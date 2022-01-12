@@ -11,5 +11,6 @@ declare module "styled-components" {
     hoverColor: string;
     mainColor: string;
     accentColor: string;
+    boxShadowColor: string;
   }
 }

@@ -10,6 +10,7 @@ export const darkTheme: DefaultTheme = {
   hoverColor: "rgb(47, 48, 49)",
   mainColor: "#ecf0f1",
   accentColor: "#ecb365",
+  boxShadowColor: "rgba(255, 255, 255, 0.25)",
 };
 
 export const lightTheme: DefaultTheme = {
@@ -18,8 +19,9 @@ export const lightTheme: DefaultTheme = {
   switcherBgColor: "#eceff1",
   switcherThumbColor: "#fff",
   headerBgColor: "rgba(255, 255, 255, 0.8)",
-  hamburgerBgColor: "rgb(255, 255, 255)",
+  hamburgerBgColor: "rgb(253, 253, 253)",
   hoverColor: "rgb(242, 242, 242)",
   mainColor: "#1e272e",
   accentColor: "#2d46b9",
+  boxShadowColor: "rgba(0, 0, 0, 0.16)",
 };

@@ -4,6 +4,7 @@ import { ProjectData } from "../assets/data/projectsData";
 
 const ProjectContainer = styled.li`
   background-color: ${(props) => props.theme.hamburgerBgColor};
+  box-shadow: 0px 1px 4px ${(props) => props.theme.boxShadowColor};
   padding: 1rem;
   border-radius: 1rem;
   word-break: break-all;
