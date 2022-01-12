@@ -45,6 +45,8 @@ const HeaderContainer = styled.header`
 `;
 
 const Navigation = styled.nav`
+  z-index: 99;
+
   & > ul {
     width: 30rem;
     display: flex;
@@ -125,6 +127,17 @@ const Navigation = styled.nav`
   }
 `;
 
+const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+  opacity: 0.5;
+  background-color: black;
+`;
+
 function Header() {
   const [hamburgerShow, setHamburgerShow] = useState(false);
   const [windowWidthSize, setWindowWidthSize] = useState(window.innerWidth);
@@ -146,8 +159,20 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (hamburgerShow) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [hamburgerShow]);
+
   return (
     <HeaderContainer>
+      <Backdrop
+        style={hamburgerShow ? { display: "block" } : { display: "none" }}
+        onClick={windowWidthSize <= 768 ? onHamburgerShow : undefined}
+      />
       <Link
         to="/"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
