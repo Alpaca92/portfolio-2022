@@ -4,6 +4,7 @@ import Project from "./Project";
 import Button from "./Button";
 import { useState } from "react";
 import styled from "styled-components";
+import media from "../assets/styles/media";
 
 const ProjectsArticle = styled(Article)`
   padding: 0 1rem;
@@ -14,6 +15,10 @@ const ProjectsContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
   grid-gap: 1rem;
+
+  ${media.tablet} {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+  }
 `;
 
 const allCategories = [
