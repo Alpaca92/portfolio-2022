@@ -18,7 +18,7 @@ function Home() {
       <Header />
       <ArticleContainer>
         <About />
-        {/* <Projects /> */}
+        <Projects />
         <Contact />
       </ArticleContainer>
     </>

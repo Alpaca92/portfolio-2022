@@ -9,14 +9,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    padding-top: 9rem;
+    padding: 9rem 0;
     background: ${(props) => props.theme.bgColor} 100%;
     color: ${(props) => props.theme.mainColor};
     font-family: 'NanumSquare', sans-serif;
-  }
-
-  body {
-    overflow-y: 
   }
 
   ul {
