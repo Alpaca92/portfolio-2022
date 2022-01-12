@@ -71,7 +71,11 @@ const Star3 = styled.div<BoxShadow>`
 `;
 
 const BackgroundContainer = styled.div`
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -999;
 `;
 
 function Background() {

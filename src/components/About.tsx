@@ -50,7 +50,6 @@ const AboutArticle = styled(Article)`
   }
 
   & > img {
-    z-index: 9;
     width: 18rem;
   }
 

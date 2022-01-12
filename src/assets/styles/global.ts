@@ -4,6 +4,10 @@ import { normalize } from "styled-normalize";
 const GlobalStyle = createGlobalStyle`
   ${normalize}
 
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     padding-top: 9rem;
     background: ${(props) => props.theme.bgColor} 100%;
@@ -11,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'NanumSquare', sans-serif;
   }
 
-  * {
-    box-sizing: border-box;
+  body {
+    overflow-y: 
   }
 
   ul {
