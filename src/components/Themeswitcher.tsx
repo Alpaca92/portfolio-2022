@@ -29,10 +29,10 @@ const Switcher = styled(Switch)<{ $isDark: number }>`
   }
 
   & .MuiSwitch-track {
-    margin-top: 3px;
+    margin-top: 0.1875rem;
     opacity: 1;
     background-color: ${(props) => props.theme.switcherBgColor} !important;
-    border-radius: 20px;
+    border-radius: 1.25rem;
   }
 `;
 
