@@ -130,8 +130,6 @@ function Header() {
   const [windowWidthSize, setWindowWidthSize] = useState(window.innerWidth);
   const headers = ["about", "projects", "contact"];
 
-  console.log(windowWidthSize);
-
   const onHamburgerShow = () => {
     setHamburgerShow((cur) => !cur);
   };
