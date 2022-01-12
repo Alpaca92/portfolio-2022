@@ -148,7 +148,12 @@ function Header() {
 
   return (
     <HeaderContainer>
-      <Link to="/">Changsung</Link>
+      <Link
+        to="/"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        Changsung
+      </Link>
       <Navigation className={hamburgerShow ? "active" : ""}>
         <ul>
           {headers.map((header, idx) => (
