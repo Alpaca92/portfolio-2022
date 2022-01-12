@@ -14,7 +14,7 @@ const AboutArticle = styled(Article)`
     & > i {
       font-size: 1.7rem;
       font-weight: 700;
-      word-break: break-word;
+      word-break: break-all;
 
       & > span {
         font-size: 1rem;
@@ -41,6 +41,7 @@ const AboutArticle = styled(Article)`
         justify-content: center;
         align-items: center;
         opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
 
         &:hover {
           opacity: 1;

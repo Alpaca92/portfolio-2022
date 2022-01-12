@@ -21,6 +21,7 @@ const ContactContainer = styled.ul`
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      transition: background-color 0.2s ease-in-out;
 
       &:hover {
         background-color: ${(props) => props.theme.hoverColor};

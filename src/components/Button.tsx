@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const ButtonContainer = styled.ul`
-  padding: 0 1rem;
   font-family: sans-serif;
   font-size: 0.9rem;
   display: grid;
@@ -13,6 +12,7 @@ const ButtonContainer = styled.ul`
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.mainColor};
     border-radius: 1rem;
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
       background-color: ${(props) => props.theme.hoverColor};

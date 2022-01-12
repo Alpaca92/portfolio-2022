@@ -5,9 +5,16 @@ import Button from "./Button";
 import { useState } from "react";
 import styled from "styled-components";
 
-const ProjectsArticle = styled(Article)``;
+const ProjectsArticle = styled(Article)`
+  padding: 0 1rem;
+`;
 
-const ProjectsContainer = styled.ul``;
+const ProjectsContainer = styled.ul`
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+  grid-gap: 1rem;
+`;
 
 const allCategories = [
   "All",
@@ -39,7 +46,7 @@ function Projects() {
   };
 
   return (
-    <ProjectsArticle>
+    <ProjectsArticle id="projects">
       <h1>Projects</h1>
       <Button categories={categories} filter={filter} />
       <ProjectsContainer>

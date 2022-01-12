@@ -6,7 +6,7 @@ export const Article = styled.article`
   margin: 0 auto;
   text-align: center;
   font-size: 1.1rem;
-  word-break: break-word;
+  word-break: break-all;
   scroll-margin-top: 4.4rem;
 
   & > h1 {
