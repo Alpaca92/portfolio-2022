@@ -1,4 +1,4 @@
-import image1 from "../images/profile-emoji.png";
+import thumb_wecry from "../images/thumb_wecry.png";
 
 export interface ProjectData {
   id: number;
@@ -14,37 +14,12 @@ export interface ProjectData {
 export default [
   {
     id: 1,
-    image: image1,
-    title: "이것은 제목입니다",
-    categories: [
-      "react.js",
-      "vue.js",
-      "typescript",
-      "javascript",
-      "html",
-      "css",
-    ],
+    image: thumb_wecry,
+    title: "내가 만약 아캐인 캐릭터라면?",
+    categories: ["Javascript", "HTML", "CSS"],
     description:
-      "이것은 설명입니다 이것은 설명입니다 이것은 설명입니다 이것은 설명입니다",
-    link: "https://www.naver.com/",
-    github: "https://github.com/Alpaca92",
-  },
-  {
-    id: 2,
-    image: image1,
-    title: "이것은 제목입니다22",
-    categories: ["react.js", "dJango", "python", "javascript", "html", "css"],
-    description: "이것은 설명입니다22",
-    link: "https://www.naver.com/",
-    github: "https://github.com/Alpaca92",
-  },
-  {
-    id: 3,
-    image: image1,
-    title: "이것은 제목입니다33",
-    categories: ["sexy skill", "React.native"],
-    description: "이것은 설명입니다33 이것은 설명입니다33 이것은 설명입니다33",
-    link: "https://www.naver.com/",
-    github: "https://github.com/Alpaca92",
+      "심리테스트 스타일의 웹사이트. Kakao API를 통한 '공유하기' 사용 가능.",
+    link: "https://wacry.netlify.app",
+    github: "https://github.com/Alpaca92/wacry",
   },
 ] as ProjectData[];

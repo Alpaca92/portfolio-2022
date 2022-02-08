@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaGlobe, FaGithub } from "react-icons/fa";
 import { ProjectData } from "../assets/data/projectsData";
+import media from "../assets/styles/media";
 
 const ProjectContainer = styled.li`
   background-color: ${(props) => props.theme.hamburgerBgColor};
@@ -11,6 +12,7 @@ const ProjectContainer = styled.li`
 
   & > img {
     width: 100%;
+    border-radius: 1rem;
   }
 
   & > h3 {
@@ -18,7 +20,14 @@ const ProjectContainer = styled.li`
     font-weight: 700;
   }
 
-  & > p {
+  ${media.tablet} {
+    & > h3 {
+      font-size: 1.2rem;
+    }
+
+    & > p {
+      font-size: 0.85rem;
+    }
   }
 `;
 
@@ -28,6 +37,7 @@ const CategoriesContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5.2rem, auto));
   grid-gap: 0.5rem 0.3rem;
+  margin-top: 0.5rem;
 
   & > li {
     padding: 0.3rem 0;
