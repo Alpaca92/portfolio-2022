@@ -1,3 +1,4 @@
+import thumb_dnd_memo from "../images/thumb_dnd_memo.png";
 import thumb_wecry from "../images/thumb_wecry.png";
 
 export interface ProjectData {
@@ -12,6 +13,16 @@ export interface ProjectData {
 
 // test data
 export default [
+  {
+    id: 2,
+    image: thumb_dnd_memo,
+    title: "Drag and Drop Memo",
+    categories: ["React.js", "Styled-components", "Recoil", "Typescript"],
+    description:
+      "Kanban 스타일의 Todo list 웹사이트. react-beautiful-dnd를 사용하여 Drag and Drop을 지원.",
+    link: "https://alpaca92.github.io/dnd-memo",
+    github: "https://github.com/Alpaca92/dnd-memo",
+  },
   {
     id: 1,
     image: thumb_wecry,

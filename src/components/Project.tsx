@@ -16,8 +16,14 @@ const ProjectContainer = styled.li`
   }
 
   & > h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
+  }
+
+  & > p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.9rem;
   }
 
   ${media.tablet} {
@@ -33,14 +39,17 @@ const ProjectContainer = styled.li`
 
 const CategoriesContainer = styled.ul`
   font-family: sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(5.2rem, auto));
   grid-gap: 0.5rem 0.3rem;
   margin-top: 0.5rem;
 
   & > li {
-    padding: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
     color: ${(props) => props.theme.accentColor};
     background-color: ${(props) => props.theme.hoverColor};
     border-radius: 1rem;

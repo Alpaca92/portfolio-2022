@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 const ButtonContainer = styled.ul`
   font-family: sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6rem, auto));
   grid-gap: 1rem 0.5rem;
 
   & > li {
-    padding: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.mainColor};
     border-radius: 1rem;
