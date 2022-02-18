@@ -205,7 +205,7 @@ function Header() {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://velog.io/@zxcvbnm5288"
+              href="https://ayaan.oopy.io/"
             >
               <span>blog</span>
               <IconContext.Provider value={{ className: "header__link-icon" }}>
