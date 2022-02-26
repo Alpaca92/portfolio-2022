@@ -1,5 +1,6 @@
 import thumb_dnd_memo from "../images/thumb_dnd_memo.png";
 import thumb_wecry from "../images/thumb_wecry.png";
+import thumb_netflix from "../images/thumb_netflix.png";
 
 export interface ProjectData {
   id: number;
@@ -15,7 +16,7 @@ export interface ProjectData {
 export default [
   {
     id: 3,
-    image: thumb_dnd_memo,
+    image: thumb_netflix,
     title: "Netflix clone",
     categories: [
       "React.js",
