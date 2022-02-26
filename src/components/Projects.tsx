@@ -36,7 +36,7 @@ const allCategories = [
 
 function Projects() {
   const [projects, setProjects] = useState(projectsData);
-  const [categories, _] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   const filter = (button: string) => {
     if (button === "All") {

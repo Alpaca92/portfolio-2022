@@ -14,6 +14,22 @@ export interface ProjectData {
 // test data
 export default [
   {
+    id: 3,
+    image: thumb_dnd_memo,
+    title: "Netflix clone",
+    categories: [
+      "React.js",
+      "Styled-components",
+      "Recoil",
+      "Typescript",
+      "React-query",
+      "Framer-motion",
+    ],
+    description: "Netflix 클론. react-query를 사용하여 data fetching.",
+    link: "https://ayaan-netflix-clone.netlify.app/",
+    github: "https://github.com/Alpaca92/netflix-clone",
+  },
+  {
     id: 2,
     image: thumb_dnd_memo,
     title: "Drag and Drop Memo",
