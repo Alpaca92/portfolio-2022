@@ -103,8 +103,7 @@ function About() {
         </p>
         <div>
           <a
-            // notion profile page 만들어서 링크에 넣기
-            href="#"
+            href="https://ayaan.oopy.io/profile"
             rel="noopener noreferrer"
             target="_blank"
           >
