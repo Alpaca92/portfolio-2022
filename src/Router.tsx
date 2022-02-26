@@ -3,7 +3,7 @@ import Home from "./routes/Home";
 
 function Router() {
   return (
-    <BrowserRouter basename="/portfolio-2022">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
