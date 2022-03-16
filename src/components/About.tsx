@@ -94,12 +94,17 @@ function About() {
           저는{" "}
           <Typewriter
             options={{
-              strings: ["도전하는", "꾸준한", "프론트엔드", "게임을 좋아하는"],
+              strings: [
+                "도전하는",
+                "책을 좋아하는",
+                "꾸준한",
+                "게임을 좋아하는",
+              ],
               autoStart: true,
               loop: true,
             }}
           />
-          개발자입니다.
+          사람입니다.
         </p>
         <div>
           <a
