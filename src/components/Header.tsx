@@ -205,7 +205,7 @@ function Header() {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://ayaan.oopy.io/"
+              href="https://alpaca92.github.io/"
             >
               <span>blog</span>
               <IconContext.Provider value={{ className: "header__link-icon" }}>
