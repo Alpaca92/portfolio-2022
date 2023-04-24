@@ -108,7 +108,7 @@ function About() {
         </p>
         <div>
           <a
-            href="https://ayaan.oopy.io/profile"
+            href="https://alpaca92.github.io/"
             rel="noopener noreferrer"
             target="_blank"
           >
